@@ -1,8 +1,8 @@
-# Prototypical Pseudo Label Denoising and Target Structure Learning for Domain Adaptive Semantic Segmentation (CVPR 2021 submission, official Pytorch implementation)
+# Prototypical Pseudo Label Denoising and Target Structure Learning for Domain Adaptive Semantic Segmentation (CVPR 2021, official Pytorch implementation)
 ![Teaser](docs/diagram.png)
-### [Project page]() |   [Paper]() | [Supplementary material]()
+### [Paper](https://arxiv.org/abs/2101.10979)
 <!-- <br> -->
-[Pan Zhang](https://panzhang0212.github.io/),  [Bo Zhang](https://www.microsoft.com/en-us/research/people/zhanbo/), [Ting Zhang](https://www.microsoft.com/en-us/research/people/tinzhan/), [Dong Chen](https://www.microsoft.com/en-us/research/people/doch/),  [Yong Wang](https://auto.ustc.edu.cn/en/teacher-detail.php?i=19), and [Fang Wen](https://www.microsoft.com/en-us/research/people/fangwen/).
+[Pan Zhang](https://panzhang0212.github.io/),  [Bo Zhang](https://bo-zhang.me/), [Ting Zhang](https://www.microsoft.com/en-us/research/people/tinzhan/), [Dong Chen](https://www.microsoft.com/en-us/research/people/doch/),  [Yong Wang](https://auto.ustc.edu.cn/en/teacher-detail.php?i=19), and [Fang Wen](https://www.microsoft.com/en-us/research/people/fangwen/).
 <!-- <br> -->
 
 ![Compare](docs/compare.png)
