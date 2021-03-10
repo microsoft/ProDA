@@ -116,12 +116,11 @@ To reproduce the performance, you need 4 GPUs with no less than 16G memory.
 ## Citation
 If you use this code for your research, please cite our papers.
 ```
-@inproceedings{zhang2020cross,
-  title={Cross-domain Correspondence Learning for Exemplar-based Image Translation},
-  author={Zhang, Pan and Zhang, Bo and Chen, Dong and Yuan, Lu and Wen, Fang},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  pages={5143--5153},
-  year={2020}
+@article{zhang2021prototypical,
+    title={Prototypical Pseudo Label Denoising and Target Structure Learning for Domain Adaptive Semantic Segmentation},
+    author={Zhang, Pan and Zhang, Bo and Zhang, Ting and Chen, Dong and Wang, Yong and Wen, Fang},
+    journal={arXiv preprint arXiv:2101.10979},
+    year={2021}
 }
 ```
 
