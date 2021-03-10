@@ -193,13 +193,3 @@ if __name__ == "__main__":
     logger = get_logger(opt.logdir)
 
     train(opt, logger)
-
-#python train.py --name gta2citylabv2_warmup --stage warm_up --freeze_bn --lr 2.5e-4 --no_resume --S_pseudo_src 1
-#python train.py --name gta2citylabv2_stage1Denoise --used_save_pseudo --path_soft Pseudo/gta2citylabv2_warmup_soft --ema --proto_rectify --moving_prototype --proto_consistW 10 --resume_path logs/gta2citylabv2_warmup/from_gta5_to_cityscapes_on_deeplabv2_best_model.pkl --rce --regular_w 0.1
-#python train.py --name gta2citylabv2_stage1Denoise --used_save_pseudo --path_soft ../CAG_UDA_Clean/Pseudo/gta2cityv2_warmupd_ls_S_soft/LP0.0 --ema --proto_rectify --moving_prototype --proto_consistW 10 --resume_path ../CAG_UDA_Clean/runs_scra/gta2cityv2_warmupd_ls_S/from_gta5_to_cityscapes_on_deeplabv2_best_model.pkl --rce --regular_w 0.1
-#python train.py --name gta2citylabv2_stage2 --stage stage2 --used_save_pseudo --path_LP Pseudo/gta2citylabv2_stage1Denoise --resume_path logs/gta2citylabv2_stage1Denoisev2/from_gta5_to_cityscapes_on_deeplabv2_best_model.pkl --S_pseudo 1 --threshold 0.95 --distillation 1 --finetune --lr 6e-4 --student_init simclr --bn_clr --no_resume
-#python train.py --name gta2citylabv2_stage3 --stage stage3 --used_save_pseudo --path_LP Pseudo/gta2citylabv2_stage2 --resume_path logs/gta2citylabv2_stage2/from_gta5_to_cityscapes_on_deeplabv2_best_model.pkl --S_pseudo 1 --threshold 0.95 --distillation 1 --finetune --lr 6e-4 --student_init simclr --bn_clr --no_resume --ema_bn
-#python train.py --name gta2citylabv2_stage3resumestage2 --stage stage3 --used_save_pseudo --path_LP Pseudo/gta2citylabv2_stage2 --resume_path logs/gta2citylabv2_stage2/from_gta5_to_cityscapes_on_deeplabv2_best_model.pkl --S_pseudo 1 --threshold 0.95 --distillation 1 --finetune --lr 6e-4 --student_init simclr --bn_clr --ema_bn
-
-#python train.py --name syn2citylabv2_warmup --src_dataset synthia --n_class 16 --src_rootpath Dataset/SYNTHIA-RAND-CITYSCAPES --stage warm_up --freeze_bn --lr 2.5e-4 --no_resume --S_pseudo_src 1
-#python train.py --name syn2citylabv2_stage1Denoise --src_dataset synthia --n_class 16 --src_rootpath Dataset/SYNTHIA-RAND-CITYSCAPES --used_save_pseudo --path_soft Pseudo/syn2citylabv2_warmup_soft --ema --proto_rectify --moving_prototype --proto_consistW 10 --resume_path logs/syn2citylabv2_warmup/from_synthia_to_cityscapes_on_deeplabv2_best_model.pkl --rce

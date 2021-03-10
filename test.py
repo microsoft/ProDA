@@ -93,12 +93,4 @@ if __name__ == "__main__":
 
     test(opt, logger)
 
-#python test.py --resume ../CAG_UDA_Clean/runs_scra/gta2cityv2_warmupd_ls_S/warmup.pkl
-#python test.py --resume ../CAG_UDA_Clean/runs_scra/gta2cityv2_Slp0rectifyhardfull_fpfp10rce_prototargetMRKLD0.1/stage1.pkl
-#python test.py --bn_clr --student_init simclr --resume ../CAG_UDA_Clean/runs_scra/gta2cityv2_Slp0rectifyhardfull_fpfp10rce_stage2lp0Sth0.95dist1simclrtune6e-4bn/stage2.pkl
-#python test.py --bn_clr --student_init simclr --resume ../CAG_UDA_Clean/runs_scra/gta2cityv2_stage3th0.95V3/stage3.pkl
-#python test.py --n_class 16 --resume ../CAG_UDA_Clean/runs_scra/syn2cityv2_warmupd_ls/warmup.pkl
-#python test.py --n_class 16 --resume ../CAG_UDA_Clean/runs_scra/syn2cityv2_lp0rectifyhardfull_fpfp10rce/stage1.pkl
-#python test.py --bn_clr --student_init simclr --n_class 16 --resume ../CAG_UDA_Clean/runs_scra/syn2cityv2_lp0rectifyhardfull_fpfp10rce_stage2lp0Sth0.95dist1simclrtune6e-4bn/stage2.pkl
-#python test.py --bn_clr --student_init simclr --n_class 16 --resume ../CAG_UDA_Clean/runs_scra/syn2cityv2_stage3th0.95/stage3.pkl
 
