@@ -126,4 +126,5 @@ If you use this code for your research, please cite our papers.
 
 ## Acknowledgments
 This code is heavily borrowed from [CAG_UDA](https://github.com/RogerZhangzz/CAG_UDA).
+
 We also thank Jiayuan Mao for his [Synchronized Batch Normalization code](https://github.com/vacancy/Synchronized-BatchNorm-PyTorch).
