@@ -29,17 +29,25 @@ Download [Cityscapes](https://www.cityscapes-dataset.com/), [GTA5](https://downl
 
 ## Inference Using Pretrained Model
 
-#### 1) GTA5 -> Cityscapes
+<details>
+  <summary>
+    <b>1) GTA5 -> Cityscapes</b>
+  </summary>
 Download the [pretrained model](https://drive.google.com/file/d/1MTtbLKtqhNI1Ec6GGfBLnqQP2u9igKWn/view?usp=sharing)(57.5 mIoU) and save it in `./pretrained/gta2citylabv2_stage3`. Then run the command 
 ```bash
 python test.py --bn_clr --student_init simclr --resume ./pretrained/gta2citylabv2_stage3/from_gta5_to_cityscapes_on_deeplabv2_best_model.pkl
 ```
+</details>
 
-#### 2) SYNTHIA -> Cityscapes
+<details>
+  <summary>
+    <b>2) SYNTHIA -> Cityscapes</b>
+  </summary>
 Download the [pretrained model](https://drive.google.com/file/d/1oiGPe6c4WfYi-5pYaejOa6L4WA98Ds63/view?usp=sharing)(55.5 mIoU, 62.0 mIoU for 16, 13 categories respectively) and save it in `./pretrained/syn2citylabv2_stage3`. Then run the command 
 ```bash
 python test.py --bn_clr --student_init simclr --n_class 16 --resume ./pretrained/syn2citylabv2_stage3/from_synthia_to_cityscapes_on_deeplabv2_best_model.pkl
 ```
+</details>
 
 ## Training
 To reproduce the performance, you need 4 GPUs with no less than 16G memory.
@@ -87,7 +95,7 @@ To reproduce the performance, you need 4 GPUs with no less than 16G memory.
 
 <details>
   <summary>
-    <b>1) 2) SYNTHIA -> Cityscapes</b>
+    <b>2) SYNTHIA -> Cityscapes</b>
   </summary>
 
 - **Stage1.** Download [warmup model](https://drive.google.com/file/d/1RpjnA8ncHqR90LeWEHE4p9wSI251KLW_/view?usp=sharing)(41.4 mIoU), save it in `./pretrained/syn2citylabv2_warmup/`.
