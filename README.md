@@ -34,7 +34,7 @@ Download [Cityscapes](https://www.cityscapes-dataset.com/), [GTA5](https://downl
     <b>1) GTA5 -> Cityscapes</b>
   </summary>
   
-Download the [pretrained model](https://drive.google.com/file/d/1MTtbLKtqhNI1Ec6GGfBLnqQP2u9igKWn/view?usp=sharing)(57.5 mIoU) and save it in `./pretrained/gta2citylabv2_stage3`. Then run the command 
+Download the [pretrained model] (https://drive.google.com/file/d/1MTtbLKtqhNI1Ec6GGfBLnqQP2u9igKWn/view?usp=sharing)(57.5 mIoU) and save it in `./pretrained/gta2citylabv2_stage3`. Then run the command 
 ```bash
 python test.py --bn_clr --student_init simclr --resume ./pretrained/gta2citylabv2_stage3/from_gta5_to_cityscapes_on_deeplabv2_best_model.pkl
 ```
@@ -45,7 +45,7 @@ python test.py --bn_clr --student_init simclr --resume ./pretrained/gta2citylabv
     <b>2) SYNTHIA -> Cityscapes</b>
   </summary>
   
-Download the [pretrained model](https://drive.google.com/file/d/1oiGPe6c4WfYi-5pYaejOa6L4WA98Ds63/view?usp=sharing)(55.5 mIoU, 62.0 mIoU for 16, 13 categories respectively) and save it in `./pretrained/syn2citylabv2_stage3`. Then run the command 
+Download the [pretrained model] (https://drive.google.com/file/d/1oiGPe6c4WfYi-5pYaejOa6L4WA98Ds63/view?usp=sharing) (55.5 mIoU, 62.0 mIoU for 16, 13 categories respectively) and save it in `./pretrained/syn2citylabv2_stage3`. Then run the command 
 ```bash
 python test.py --bn_clr --student_init simclr --n_class 16 --resume ./pretrained/syn2citylabv2_stage3/from_synthia_to_cityscapes_on_deeplabv2_best_model.pkl
 ```
@@ -72,7 +72,7 @@ To reproduce the performance, you need 4 GPUs with no less than 16G memory.
     python train.py --name gta2citylabv2_stage1Denoise --used_save_pseudo --ema --proto_rectify --moving_prototype --path_soft Pseudo/gta2citylabv2_warmup_soft --resume_path ./pretrained/gta2citylabv2_warmup/from_gta5_to_cityscapes_on_deeplabv2_best_model.pkl --proto_consistW 10 --rce --regular_w 0.1
     ```
 
-- **Stage2.** This stage needs well-trained model from stage1 as teacher model. You can get it by above command or download released pretrained [stage1 model](https://drive.google.com/file/d/15masr_JcYk6nj73ySiY8HJw__pQEyBfV/view?usp=sharing)(53.7 mIoU) and save it in `./pretrained/gta2citylabv2_stage1Denoise/` (path of `resume_path`). Besides, download pretrained [simclr model](https://drive.google.com/file/d/1IHT-n-ko2DRWXNaW8OvvYktn_5VQYd2C/view?usp=sharing) and save it it `./pretrained/simclr/`.
+- **Stage2.** This stage needs well-trained model from stage1 as teacher model. You can get it by above command or download the pretrained model [stage1 model](https://drive.google.com/file/d/15masr_JcYk6nj73ySiY8HJw__pQEyBfV/view?usp=sharing)(53.7 mIoU) and save it in `./pretrained/gta2citylabv2_stage1Denoise/` (path of `resume_path`). Besides, download the pretrained model [simclr model](https://drive.google.com/file/d/1IHT-n-ko2DRWXNaW8OvvYktn_5VQYd2C/view?usp=sharing) and save it to `./pretrained/simclr/`.
     * Generate pseudo label.
     ```bash
     python generate_pseudo_label.py --name gta2citylabv2_stage1Denoise --flip --resume_path ./logs/gta2citylabv2_stage1Denoise/from_gta5_to_cityscapes_on_deeplabv2_best_model.pkl --no_droplast
@@ -82,7 +82,7 @@ To reproduce the performance, you need 4 GPUs with no less than 16G memory.
     python train.py --name gta2citylabv2_stage2 --stage stage2 --used_save_pseudo --path_LP Pseudo/gta2citylabv2_stage1Denoise --resume_path ./logs/gta2citylabv2_stage1Denoise/from_gta5_to_cityscapes_on_deeplabv2_best_model.pkl --S_pseudo 1 --threshold 0.95 --distillation 1 --finetune --lr 6e-4 --student_init simclr --bn_clr --no_resume
     ```
 
-- **Stage3.** This stage needs well-trained model from stage2 as teacher model. You can get it by above command or download released pretrained [stage2 model](https://drive.google.com/file/d/1Putk_jWqKpYwh1liTZyYxREnqBQhGNDo/view?usp=sharing)(56.9 mIoU) and save it in `./pretrained/gta2citylabv2_stage2/` (path of `resume_path`).
+- **Stage3.** This stage needs well-trained model from stage2 as the teacher model. You can get it with the above command or download the pretrained model [stage2 model](https://drive.google.com/file/d/1Putk_jWqKpYwh1liTZyYxREnqBQhGNDo/view?usp=sharing)(56.9 mIoU) and save it in `./pretrained/gta2citylabv2_stage2/` (path of `resume_path`).
     * Generate pseudo label.
     ```bash
     python generate_pseudo_label.py --name gta2citylabv2_stage2 --flip --resume_path ./logs/gta2citylabv2_stage2/from_gta5_to_cityscapes_on_deeplabv2_best_model.pkl --no_droplast --bn_clr --student_init simclr
