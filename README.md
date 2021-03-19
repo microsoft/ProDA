@@ -45,7 +45,7 @@ python test.py --bn_clr --student_init simclr --n_class 16 --resume ./pretrained
 To reproduce the performance, you need 4 GPUs with no less than 16G memory.
 <details>
   <summary>
-#### 1) GTA5 -> Cityscapes
+    <b>1) GTA5 -> Cityscapes</b>
   </summary>
    
 - **Stage1.** Download [warmup model](https://drive.google.com/file/d/1X7AyDtm4DC2WET-xX2b39x8aSkrD266f/view?usp=sharing)(43.3 mIoU), and save it in `./pretrained/gta2citylabv2_warmup/`.
@@ -82,7 +82,7 @@ To reproduce the performance, you need 4 GPUs with no less than 16G memory.
     python train.py --name gta2citylabv2_stage3 --stage stage3 --used_save_pseudo --path_LP Pseudo/gta2citylabv2_stage2 --resume_path ./logs/gta2citylabv2_stage2/from_gta5_to_cityscapes_on_deeplabv2_best_model.pkl --S_pseudo 1 --threshold 0.95 --distillation 1 --finetune --lr 6e-4 --student_init simclr --bn_clr --ema_bn
     ```
     
-<details>
+</details>
     
 #### 2) SYNTHIA -> Cityscapes
 - **Stage1.** Download [warmup model](https://drive.google.com/file/d/1RpjnA8ncHqR90LeWEHE4p9wSI251KLW_/view?usp=sharing)(41.4 mIoU), save it in `./pretrained/syn2citylabv2_warmup/`.
