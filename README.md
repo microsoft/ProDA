@@ -33,6 +33,7 @@ Download [Cityscapes](https://www.cityscapes-dataset.com/), [GTA5](https://downl
   <summary>
     <b>1) GTA5 -> Cityscapes</b>
   </summary>
+  
 Download the [pretrained model](https://drive.google.com/file/d/1MTtbLKtqhNI1Ec6GGfBLnqQP2u9igKWn/view?usp=sharing)(57.5 mIoU) and save it in `./pretrained/gta2citylabv2_stage3`. Then run the command 
 ```bash
 python test.py --bn_clr --student_init simclr --resume ./pretrained/gta2citylabv2_stage3/from_gta5_to_cityscapes_on_deeplabv2_best_model.pkl
@@ -43,6 +44,7 @@ python test.py --bn_clr --student_init simclr --resume ./pretrained/gta2citylabv
   <summary>
     <b>2) SYNTHIA -> Cityscapes</b>
   </summary>
+  
 Download the [pretrained model](https://drive.google.com/file/d/1oiGPe6c4WfYi-5pYaejOa6L4WA98Ds63/view?usp=sharing)(55.5 mIoU, 62.0 mIoU for 16, 13 categories respectively) and save it in `./pretrained/syn2citylabv2_stage3`. Then run the command 
 ```bash
 python test.py --bn_clr --student_init simclr --n_class 16 --resume ./pretrained/syn2citylabv2_stage3/from_synthia_to_cityscapes_on_deeplabv2_best_model.pkl
@@ -144,6 +146,12 @@ If you use this code for your research, please cite our papers.
     year={2021}
 }
 ```
+
+## License
+
+The codes and the pretrained model in this repository are under the MIT license as specified by the LICENSE file. 
+
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
 ## Acknowledgments
 This code is heavily borrowed from [CAG_UDA](https://github.com/RogerZhangzz/CAG_UDA).  
