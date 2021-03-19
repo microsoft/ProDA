@@ -34,7 +34,7 @@ Download [Cityscapes](https://www.cityscapes-dataset.com/), [GTA5](https://downl
     <b>1) GTA5 -> Cityscapes</b>
   </summary>
   
-Download the [pretrained model](https://drive.google.com/file/d/1MTtbLKtqhNI1Ec6GGfBLnqQP2u9igKWn/view?usp=sharing)(57.5 mIoU) and save it in `./pretrained/gta2citylabv2_stage3`. Then run the command 
+Download the [pretrained model](https://drive.google.com/file/d/1MTtbLKtqhNI1Ec6GGfBLnqQP2u9igKWn/view?usp=sharing) (57.5 mIoU) and save it in `./pretrained/gta2citylabv2_stage3`. Then run the command 
 ```bash
 python test.py --bn_clr --student_init simclr --resume ./pretrained/gta2citylabv2_stage3/from_gta5_to_cityscapes_on_deeplabv2_best_model.pkl
 ```
@@ -58,7 +58,7 @@ To reproduce the performance, you need 4 GPUs with no less than 16G memory.
     <b>1) GTA5 -> Cityscapes</b>
   </summary>
    
-- **Stage1.** Download [warmup model](https://drive.google.com/file/d/1X7AyDtm4DC2WET-xX2b39x8aSkrD266f/view?usp=sharing)(43.3 mIoU), and save it in `./pretrained/gta2citylabv2_warmup/`.
+- **Stage1.** Download [warm-up model](https://drive.google.com/file/d/1X7AyDtm4DC2WET-xX2b39x8aSkrD266f/view?usp=sharing) (43.3 mIoU), and save it in `./pretrained/gta2citylabv2_warmup/`.
     * Generate soft pseudo label.
     ```bash
     python generate_pseudo_label.py --name gta2citylabv2_warmup_soft --soft --resume_path ./pretrained/gta2citylabv2_warmup/from_gta5_to_cityscapes_on_deeplabv2_best_model.pkl --no_droplast 
