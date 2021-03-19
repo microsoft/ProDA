@@ -83,8 +83,13 @@ To reproduce the performance, you need 4 GPUs with no less than 16G memory.
     ```
     
 </details>
-    
-#### 2) SYNTHIA -> Cityscapes
+
+
+<details>
+  <summary>
+    <b>1) 2) SYNTHIA -> Cityscapes</b>
+  </summary>
+
 - **Stage1.** Download [warmup model](https://drive.google.com/file/d/1RpjnA8ncHqR90LeWEHE4p9wSI251KLW_/view?usp=sharing)(41.4 mIoU), save it in `./pretrained/syn2citylabv2_warmup/`.
     * Generate soft pseudo label.
     ```bash
@@ -118,6 +123,8 @@ To reproduce the performance, you need 4 GPUs with no less than 16G memory.
     ```bash
     python train.py --name syn2citylabv2_stage3 --stage stage3 --src_dataset synthia --n_class 16 --src_rootpath src_rootpath --used_save_pseudo --path_LP Pseudo/syn2citylabv2_stage2 --resume_path ./logs/syn2citylabv2_stage2/from_synthia_to_cityscapes_on_deeplabv2_best_model.pkl --S_pseudo 1 --threshold 0.95 --distillation 1 --finetune --lr 6e-4 --student_init simclr --bn_clr --ema_bn
     ```
+    
+</details>
 
 ## Citation
 If you use this code for your research, please cite our papers.
