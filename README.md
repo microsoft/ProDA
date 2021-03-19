@@ -34,7 +34,7 @@ Download [Cityscapes](https://www.cityscapes-dataset.com/), [GTA5](https://downl
     <b>1) GTA5 -> Cityscapes</b>
   </summary>
   
-Download the [pretrained model] (https://drive.google.com/file/d/1MTtbLKtqhNI1Ec6GGfBLnqQP2u9igKWn/view?usp=sharing)(57.5 mIoU) and save it in `./pretrained/gta2citylabv2_stage3`. Then run the command 
+Download the [pretrained model](https://drive.google.com/file/d/1MTtbLKtqhNI1Ec6GGfBLnqQP2u9igKWn/view?usp=sharing)(57.5 mIoU) and save it in `./pretrained/gta2citylabv2_stage3`. Then run the command 
 ```bash
 python test.py --bn_clr --student_init simclr --resume ./pretrained/gta2citylabv2_stage3/from_gta5_to_cityscapes_on_deeplabv2_best_model.pkl
 ```
@@ -45,7 +45,7 @@ python test.py --bn_clr --student_init simclr --resume ./pretrained/gta2citylabv
     <b>2) SYNTHIA -> Cityscapes</b>
   </summary>
   
-Download the [pretrained model] (https://drive.google.com/file/d/1oiGPe6c4WfYi-5pYaejOa6L4WA98Ds63/view?usp=sharing) (55.5 mIoU, 62.0 mIoU for 16, 13 categories respectively) and save it in `./pretrained/syn2citylabv2_stage3`. Then run the command 
+Download the [pretrained model](https://drive.google.com/file/d/1oiGPe6c4WfYi-5pYaejOa6L4WA98Ds63/view?usp=sharing) (55.5 mIoU, 62.0 mIoU for 16, 13 categories respectively) and save it in `./pretrained/syn2citylabv2_stage3`. Then run the command 
 ```bash
 python test.py --bn_clr --student_init simclr --n_class 16 --resume ./pretrained/syn2citylabv2_stage3/from_synthia_to_cityscapes_on_deeplabv2_best_model.pkl
 ```
