@@ -137,7 +137,7 @@ To reproduce the performance, you need 4 GPUs with no less than 16G memory.
 </details>
 
 ## Citation
-If you use this code for your research, please cite our papers.
+If you like our work and use the code or models for your research, please cite our work as follows.
 ```
 @article{zhang2021prototypical,
     title={Prototypical Pseudo Label Denoising and Target Structure Learning for Domain Adaptive Semantic Segmentation},
